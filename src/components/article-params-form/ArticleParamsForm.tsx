@@ -37,7 +37,7 @@ export const ArticleParamsForm = ({
 	const [isMenuOpen, setIsMenuOpen] = useState(false);
 	const rootRef = useRef<HTMLDivElement>(null);
 
-	useClickOutside(rootRef, () => setIsMenuOpen(false));
+	useClickOutside(rootRef, () => setIsMenuOpen(false), isMenuOpen);
 
 	const articleDefaultFormState: ArticleFormState = {
 		fontFamily: fontFamilyOptions[0],
